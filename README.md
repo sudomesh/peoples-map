@@ -9,4 +9,7 @@ Nothing is here yet.
 
 This is enough to build node map with connections. In fact the first two points is enough for everything but drawing the connections.
 
+# Notes
+
+leafletjs with openstreetmaps and the built-in polylines feature for connections and the markercluser plugin for clustering.
 
