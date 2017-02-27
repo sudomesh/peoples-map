@@ -1,5 +1,5 @@
 
-Nothing is here yet.
+WORK IN PROGRESS. ALMOST NOTHING HERE YET.
 
 # Ideas
 
@@ -9,7 +9,12 @@ Nothing is here yet.
 
 This is enough to build node map with connections. In fact the first two points is enough for everything but drawing the connections.
 
-# Notes
+# ToDo
 
-leafletjs with openstreetmaps and the built-in polylines feature for connections and the markercluser plugin for clustering.
+## frontend
+
+* Add markercluser plugin for clustering
+* Add custom icons for nodes: meshing, meshing only via internet, offline and potential
+
+
 
