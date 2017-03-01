@@ -26,7 +26,9 @@
     "leaflet": "^1.0.3",
     "level": "^1.6.0",
     "minimist": "^1.2.0",
-    "routes": "^2.1.0"
+    "routes": "^2.1.0",
+    "rpc-multistream": "^0.9.2",
+    "websocket-stream": "^3.3.3"
   },
   "devDependencies": {
     "browserify": "^14.1.0",

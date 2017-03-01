@@ -2,9 +2,14 @@
 
 var fs = require('fs');
 var path = require('path');
-var router = require('routes')(); // server side router
 var http = require('http');
+
+var router = require('routes')(); // server side router
+var websocket = require('websocket-stream');
 var minimist = require('minimist');
+var rpc = require('rpc-multistream');
+
+var rpcServer;
 
 // parse command line arguments
 var argv = minimist(process.argv.slice(2), {
@@ -46,6 +51,7 @@ router.addRoute('/*', function(req, res, match) {
     rs.pipe(res);
 });
 
+
 // initialize http server
 var server = http.createServer(function(req, res) {
     var m = router.match(req.url);
@@ -56,4 +62,30 @@ console.log("Starting http server on " + (settings.hostname || '*') + " port " +
 
 // start http server
 server.listen(settings.port, settings.hostname);
+
+
+
+// start websocket listener
+websocket.createServer({server: server}, function(stream) {
+
+  // the methods available via RPC
+  rpcServer = rpc({
+
+    foo: function(cb) {
+      console.log("foo called");
+      cb(null, "foo says hi");
+    }
+    
+  }, {
+    objectMode: true, // default to object mode streams
+    debug: false
+  });
+
+  rpcServer.on('error', function(err) {
+    console.error("Connection error (client disconnect?):", err);
+  });
+
+  rpcServer.pipe(stream).pipe(rpcServer);
+});
+
 
