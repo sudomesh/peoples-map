@@ -1,0 +1,44 @@
+{
+  "name": "peoples-map",
+  "version": "0.0.1",
+  "description": "A simple mesh map and status monitor",
+  "homepage": "http://github.com/sudomesh/peoples-map",
+  "main": "bin/cmd.js",
+  "scripts": {
+    "watch": "watchify -vd -e src/index.js -o www/bundle.js",
+    "build": "browserify -e src/index.js -m -o www/bundle.js",
+    "start": "./bin/cmd.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sudomesh/peoples-map"
+  },
+  "keywords": [
+    "map",
+    "mesh",
+    "monitor",
+    "node",
+    "wifi"
+  ],
+  "dependencies": {
+    "ecstatic": "^2.1.0",
+    "jquery": "^3.1.1",
+    "leaflet": "^1.0.3",
+    "level": "^1.6.0",
+    "minimist": "^1.2.0",
+    "routes": "^2.1.0"
+  },
+  "devDependencies": {
+    "browserify": "^14.1.0",
+    "watchify": "^3.9.0"
+  },
+  "author": {
+    "name": "Marc Juul",
+    "email": "npm@juul.io"
+  },
+  "license": "AGPL-3.0",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/sudomesh/peoples-map/issues"
+  }
+}

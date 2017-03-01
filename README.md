@@ -1,6 +1,26 @@
 
 WORK IN PROGRESS. ALMOST NOTHING HERE YET.
 
+# Installing
+
+```
+npm install
+npm run build
+cp settings.js.example settings.js
+```
+
+# Running
+
+```
+npm start
+```
+
+Point a browser at http://localhost:8000/
+
+# Setttings
+
+Look at `settings.js`.
+
 # Ideas
 
 * On a node on the mesh, simply dump babeld routes to get IPs of all active nodes.
@@ -14,7 +34,7 @@ This is enough to build node map with connections. In fact the first two points 
 ## frontend
 
 * Add markercluser plugin for clustering
-* Add custom icons for nodes: meshing, meshing only via internet, offline and potential
+* Add custom icons for nodes: meshing, meshing only via internet, offline and potential (and maybe "does it have an extender node")
 
 
 
