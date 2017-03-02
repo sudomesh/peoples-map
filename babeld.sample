@@ -1,0 +1,65 @@
+Listening on interfaces: l2tp0 l2tp_holder l2tp1001 l2tp1011 l2tp1021 l2tp1031 l2tp1041 l2tp1051 l2tp1061 l2tp1071 l2tp1081 l2tp1091 l2tp1101 l2tp1111 l2tp1121 l2tp1131 l2tp1141 l2tp1151 l2tp1161 l2tp1171 l2tp1181 l2tp1191 l2tp1201 l2tp1211 l2tp1221 
+
+My id 02:25:90:ff:fe:7e:11:17 seqno 61738
+Neighbour fe80::4cef:9eff:fe08:6e03 dev l2tp1221 reach ffff rxcost 96 txcost 96 rtt 0.000 rttcost 0 chan -2.
+Neighbour fe80::e09c:78ff:fe2c:1ebf dev l2tp1211 reach ffff rxcost 96 txcost 96 rtt 0.000 rttcost 0 chan -2.
+Neighbour fe80::94f8:d1ff:fe54:afb9 dev l2tp1201 reach ffff rxcost 96 txcost 96 rtt 0.000 rttcost 0 chan -2.
+Neighbour fe80::54ff:4cff:fe10:5 dev l2tp1181 reach ffff rxcost 96 txcost 96 rtt 0.000 rttcost 0 chan -2.
+Neighbour fe80::805f:dfff:fe39:e7f4 dev l2tp1171 reach fbf7 rxcost 96 txcost 96 rtt 0.000 rttcost 0 chan -2.
+Neighbour fe80::4c5c:82ff:feb0:2419 dev l2tp1161 reach ffff rxcost 96 txcost 96 rtt 0.000 rttcost 0 chan -2.
+Neighbour fe80::e44d:c3ff:fe04:9936 dev l2tp1151 reach ffff rxcost 96 txcost 96 rtt 0.000 rttcost 0 chan -2.
+Neighbour fe80::946c:d1ff:fe2c:81a9 dev l2tp1141 reach ffff rxcost 96 txcost 96 rtt 0.000 rttcost 0 chan -2.
+Neighbour fe80::e0b6:3fff:fe5f:8a7e dev l2tp1131 reach ffff rxcost 96 txcost 96 rtt 0.000 rttcost 0 chan -2.
+Neighbour fe80::5c7a:ecff:feda:9107 dev l2tp1121 reach ffff rxcost 96 txcost 96 rtt 0.000 rttcost 0 chan -2.
+Neighbour fe80::2ce1:3ff:fe96:e903 dev l2tp1111 reach ffff rxcost 96 txcost 96 rtt 0.000 rttcost 0 chan -2.
+Neighbour fe80::f0d4:56ff:fef4:852 dev l2tp1101 reach ffff rxcost 96 txcost 96 rtt 0.000 rttcost 0 chan -2.
+Neighbour fe80::f0e4:e5ff:fe77:454c dev l2tp1091 reach ffff rxcost 96 txcost 96 rtt 0.000 rttcost 0 chan -2.
+Neighbour fe80::34ff:6fff:fe38:ac9 dev l2tp1081 reach ffff rxcost 96 txcost 96 rtt 0.000 rttcost 0 chan -2.
+Neighbour fe80::3c3f:24ff:fe46:4a0e dev l2tp1071 reach ffff rxcost 96 txcost 96 rtt 0.000 rttcost 0 chan -2.
+Neighbour fe80::3466:bbff:fefe:ac19 dev l2tp1061 reach ffff rxcost 96 txcost 96 rtt 0.000 rttcost 0 chan -2.
+Neighbour fe80::b4c8:e0ff:fe3c:67c dev l2tp1041 reach ffff rxcost 96 txcost 96 rtt 0.000 rttcost 0 chan -2.
+Neighbour fe80::80b8:86ff:fea5:ab8d dev l2tp1021 reach ffff rxcost 96 txcost 96 rtt 0.000 rttcost 0 chan -2.
+Neighbour fe80::887f:1bff:fef4:87a9 dev l2tp1011 reach ffff rxcost 96 txcost 96 rtt 0.000 rttcost 0 chan -2.
+Neighbour fe80::e465:32ff:fedb:965c dev l2tp1001 reach ffff rxcost 96 txcost 96 rtt 0.000 rttcost 0 chan -2.
+Neighbour fe80::8e8:5aff:fe03:cef6 dev l2tp0 reach ffff rxcost 96 txcost 96 rtt 0.000 rttcost 0 chan -2.
+0.0.0.0/0 metric 0 (exported)
+100.64.0.42/32 metric 0 (exported)
+0.0.0.0/0 metric 96 (96) refmetric 0 id 06:01:40:ff:fe:fc:42:01 seqno 39984 age 0 via l2tp0 neigh fe80::8e8:5aff:fe03:cef6 nexthop 100.64.0.1 (feasible)
+100.64.0.1/32 metric 96 (96) refmetric 0 id 06:01:40:ff:fe:fc:42:01 seqno 39984 age 0 via l2tp0 neigh fe80::8e8:5aff:fe03:cef6 nexthop 100.64.0.1 (installed)
+100.64.0.10/32 metric 192 (192) refmetric 96 id 06:01:29:ff:fe:19:66:01 seqno 65163 age 0 via l2tp0 neigh fe80::8e8:5aff:fe03:cef6 nexthop 100.64.0.1 (installed)
+100.64.0.100/32 metric 96 (96) refmetric 0 id 26:a4:3c:ff:fe:aa:b3:8e seqno 53106 age 8 via l2tp1011 neigh fe80::887f:1bff:fef4:87a9 nexthop 100.64.0.100 (installed)
+100.64.2.0/26 metric 224 (224) refmetric 128 id 02:90:a9:ff:fe:0b:4b:eb seqno 63625 age 11 via l2tp1201 neigh fe80::94f8:d1ff:fe54:afb9 nexthop 100.64.2.1 (installed)
+100.64.2.2/32 metric 448 (448) refmetric 352 id 6a:72:51:ff:fe:11:79:c4 seqno 51529 chan (255) age 16 via l2tp1221 neigh fe80::4cef:9eff:fe08:6e03 nexthop 100.64.24.129 (installed)
+100.64.5.0/26 metric 320 (320) refmetric 224 id 02:90:a9:ff:fe:0b:73:cb seqno 37659 age 0 via l2tp0 neigh fe80::8e8:5aff:fe03:cef6 nexthop 100.64.0.1 (installed)
+100.64.20.0/26 metric 320 (320) refmetric 224 id c6:6e:1f:ff:fe:b9:f0:6d seqno 60093 age 0 via l2tp0 neigh fe80::8e8:5aff:fe03:cef6 nexthop 100.64.0.1 (installed)
+100.64.20.2/32 metric 288 (288) refmetric 192 id 26:a4:3c:ff:fe:a6:a2:04 seqno 48303 age 0 via l2tp0 neigh fe80::8e8:5aff:fe03:cef6 nexthop 100.64.0.1 (installed)
+100.64.22.0/26 metric 224 (224) refmetric 128 id 16:cc:20:ff:fe:cc:f3:21 seqno 33143 age 3 via l2tp1151 neigh fe80::e44d:c3ff:fe04:9936 nexthop 100.64.22.1 (installed)
+100.64.22.64/26 metric 224 (224) refmetric 128 id 62:e3:27:ff:fe:72:62:c3 seqno 939 age 11 via l2tp1121 neigh fe80::5c7a:ecff:feda:9107 nexthop 100.64.22.65 (installed)
+100.64.22.192/26 metric 480 (480) refmetric 384 id 02:90:a9:ff:fe:05:f1:4b seqno 23183 chan (255) age 11 via l2tp1121 neigh fe80::5c7a:ecff:feda:9107 nexthop 100.64.22.65 (installed)
+100.64.22.194/32 metric 448 (448) refmetric 352 id 02:15:6d:ff:fe:72:05:a9 seqno 3475 chan (255) age 11 via l2tp1121 neigh fe80::5c7a:ecff:feda:9107 nexthop 100.64.22.65 (installed)
+100.64.23.64/26 metric 320 (320) refmetric 224 id 02:90:a9:ff:fe:0b:eb:eb seqno 37187 age 0 via l2tp0 neigh fe80::8e8:5aff:fe03:cef6 nexthop 100.64.0.1 (installed)
+100.64.24.128/26 metric 224 (224) refmetric 128 id 16:cc:20:ff:fe:da:2c:3a seqno 27926 age 16 via l2tp1221 neigh fe80::4cef:9eff:fe08:6e03 nexthop 100.64.24.129 (installed)
+100.64.31.192/26 metric 320 (320) refmetric 224 id 02:90:a9:ff:fe:05:f4:71 seqno 35859 age 0 via l2tp0 neigh fe80::8e8:5aff:fe03:cef6 nexthop 100.64.0.1 (installed)
+100.64.32.64/26 metric 320 (320) refmetric 224 id 02:90:a9:ff:fe:0b:7c:1b seqno 54827 age 0 via l2tp0 neigh fe80::8e8:5aff:fe03:cef6 nexthop 100.64.0.1 (installed)
+100.64.32.66/32 metric 288 (288) refmetric 192 id 02:27:22:ff:fe:3e:06:55 seqno 49275 age 0 via l2tp0 neigh fe80::8e8:5aff:fe03:cef6 nexthop 100.64.0.1 (installed)
+100.64.34.192/26 metric 224 (224) refmetric 128 id 02:90:a9:ff:fe:14:36:66 seqno 33187 age 7 via l2tp1081 neigh fe80::34ff:6fff:fe38:ac9 nexthop 100.64.34.193 (installed)
+100.64.34.194/32 metric 192 (192) refmetric 96 id de:9f:db:ff:fe:4a:bc:e3 seqno 59820 age 7 via l2tp1081 neigh fe80::34ff:6fff:fe38:ac9 nexthop 100.64.34.193 (installed)
+100.64.35.128/26 metric 480 (480) refmetric 384 id 02:90:a9:ff:fe:0c:75:91 seqno 9136 chan (255) age 16 via l2tp1091 neigh fe80::f0e4:e5ff:fe77:454c nexthop 100.64.37.193 (installed)
+100.64.35.130/32 metric 448 (448) refmetric 352 id 6a:72:51:ff:fe:10:83:af seqno 35924 chan (255) age 16 via l2tp1091 neigh fe80::f0e4:e5ff:fe77:454c nexthop 100.64.37.193 (installed)
+100.64.36.64/26 metric 224 (224) refmetric 128 id 02:90:a9:ff:fe:0e:38:ab seqno 17891 age 1 via l2tp1021 neigh fe80::80b8:86ff:fea5:ab8d nexthop 100.64.36.65 (installed)
+100.64.37.64/26 metric 224 (224) refmetric 128 id 02:90:a9:ff:fe:0b:46:71 seqno 31233 age 7 via l2tp1161 neigh fe80::4c5c:82ff:feb0:2419 nexthop 100.64.37.65 (installed)
+100.64.37.192/26 metric 224 (224) refmetric 128 id 02:90:a9:ff:fe:0a:f1:26 seqno 34128 age 16 via l2tp1091 neigh fe80::f0e4:e5ff:fe77:454c nexthop 100.64.37.193 (installed)
+100.64.41.128/26 metric 224 (224) refmetric 128 id 16:cc:20:ff:fe:b5:5c:24 seqno 8918 age 16 via l2tp1171 neigh fe80::805f:dfff:fe39:e7f4 nexthop 100.64.41.129 (installed)
+100.64.45.64/26 metric 224 (224) refmetric 128 id c6:e9:84:ff:fe:d0:00:0f seqno 22012 age 10 via l2tp1101 neigh fe80::f0d4:56ff:fef4:852 nexthop 100.64.45.65 (installed)
+100.64.45.192/26 metric 224 (224) refmetric 128 id 02:90:a9:ff:fe:0c:5c:5b seqno 34228 age 2 via l2tp1041 neigh fe80::b4c8:e0ff:fe3c:67c nexthop 100.64.45.193 (installed)
+100.64.46.0/26 metric 224 (224) refmetric 128 id 02:90:a9:ff:fe:0c:53:06 seqno 39910 age 11 via l2tp1211 neigh fe80::e09c:78ff:fe2c:1ebf nexthop 100.64.46.1 (installed)
+100.64.53.0/26 metric 224 (224) refmetric 128 id 02:90:a9:ff:fe:cc:f6:0b seqno 37121 age 2 via l2tp1111 neigh fe80::2ce1:3ff:fe96:e903 nexthop 100.64.53.1 (installed)
+100.64.54.192/26 metric 224 (224) refmetric 128 id 02:90:a9:ff:fe:05:f5:16 seqno 37816 age 14 via l2tp1001 neigh fe80::e465:32ff:fedb:965c nexthop 100.64.54.193 (installed)
+100.64.55.192/26 metric 224 (224) refmetric 128 id 02:90:a9:ff:fe:0c:76:e1 seqno 21575 age 0 via l2tp1141 neigh fe80::946c:d1ff:fe2c:81a9 nexthop 100.64.55.193 (installed)
+100.64.56.64/26 metric 224 (224) refmetric 128 id 02:90:a9:ff:fe:0e:7e:61 seqno 25537 age 6 via l2tp1181 neigh fe80::54ff:4cff:fe10:5 nexthop 100.64.56.65 (installed)
+100.64.57.128/26 metric 224 (224) refmetric 128 id 02:90:a9:ff:fe:0e:aa:61 seqno 61386 age 10 via l2tp1061 neigh fe80::3466:bbff:fefe:ac19 nexthop 100.64.57.129 (installed)
+100.64.58.128/26 metric 224 (224) refmetric 128 id 02:90:a9:ff:fe:0c:72:0b seqno 34631 age 11 via l2tp1071 neigh fe80::3c3f:24ff:fe46:4a0e nexthop 100.64.58.129 (installed)
+100.64.64.0/22 metric 96 (96) refmetric 0 id 02:14:22:ff:fe:b0:68:85 seqno 39334 age 9 via l2tp1131 neigh fe80::e0b6:3fff:fe5f:8a7e nexthop 100.64.64.1 (installed)
+172.22.0.2/32 metric 448 (448) refmetric 352 id 6a:72:51:ff:fe:11:79:c4 seqno 51529 chan (255) age 16 via l2tp1221 neigh fe80::4cef:9eff:fe08:6e03 nexthop 100.64.24.129 (installed)
+192.168.0.227/32 metric 96 (96) refmetric 0 id 26:a4:3c:ff:fe:aa:b3:8e seqno 53106 age 8 via l2tp1011 neigh fe80::887f:1bff:fef4:87a9 nexthop 100.64.0.100 (installed)
+

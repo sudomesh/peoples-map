@@ -148,6 +148,12 @@ function onConnect(remote) {
 
     console.log("Successful RPC call!");
 
+    var s = remote.babelRoutes();
+
+    s.on('data', function(o) {
+      console.log("babel says:", o);
+    });
+
   });
 
 }

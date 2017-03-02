@@ -1,5 +1,9 @@
 
-WORK IN PROGRESS. ALMOST NOTHING HERE YET.
+WORK IN PROGRESS. NOT USEFUL YET.
+
+This is a very simple mesh map written in node.js, indended for use with mesh networks using Babel as the mesh routing algorithm and OpenWRT with ubus and uhttpd-mod-ubus.
+
+It gets node status by running on a mesh node and asking babeld for the current routes. It will get node connection status by periodically polling every node in the mesh for their neighbors via http and getting a response from babeld via ubus via uhttpd-mod-ubus.
 
 # Installing
 
@@ -19,22 +23,33 @@ Point a browser at http://localhost:8000/
 
 # Setttings
 
-Look at `settings.js`.
+Look at the comments `settings.js`. To actually use it with babeld you'll need to modify the `babeld_cmd` option since it defaults to using a sample dataset.
 
-# Ideas
+# What does it do now
 
-* On a node on the mesh, simply dump babeld routes to get IPs of all active nodes.
-* Get list of nodes and their addresses from `secrets` server.
-* Use same ubus-http info as our frontend (maybe with a limited user account) to poll connection info from each node
-
-This is enough to build node map with connections. In fact the first two points is enough for everything but drawing the connections.
+* Shows a map using leafletjs and openstreetmaps via a free mapbox account
+* Streams node status to client by calling `babeld -i` and parsing the data
 
 # ToDo
 
-## frontend
+## Version 0 (node status only)
 
-* Add markercluser plugin for clustering
+* Add plain list of nodes to UI (some nodes won't have addresses/locations)
+
+## Version 1 (mapping the nodes)
+
+* Periodically pull addresses from a remote [meshnode-database](https://github.com/sudomesh/meshnode-database) and associate with IPs from babeld
+* Save this data to a local leveldb so you don't have to keep hitting the meshnode-database
+* This will require adding an "IPs and locations only" method to the public meshnode-database API
+
+## Version 2 (mapping connection between nodes)
+
+Periodically pull `babeld -i` info from all nodes on the network via OpenWRTs ubus via uhttpd-mod-ubus. This will require adding to the ubus API (can be done simply using a bash script) and updating all nodes. Sync with Jehan since this will use same/similar API as the new front-end he's working on.
+
+## Frontend
+
 * Add custom icons for nodes: meshing, meshing only via internet, offline and potential (and maybe "does it have an extender node")
+* Add leafletjs markercluser plugin for clustering when nodes are too close
 
 
 
