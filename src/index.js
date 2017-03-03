@@ -8,7 +8,6 @@ var reconnectDelay = 2;
 var reconnectAttempts = 0;
 var reconnectAttemptsMax = 10;
 
-
 function reconnect() {
     if (reconnectAttempts > reconnectAttemptsMax) {
         console.log("Disconnected from server. Gave up trying to reconnect after " + reconnectAttemptsMax + " attempts.", {
@@ -117,7 +116,6 @@ function plotExample() {
 
   marker2.addTo(mymap);
 
-
   var points = [pointA, pointB];
 
   var line = new L.Polyline(points, {
@@ -128,7 +126,6 @@ function plotExample() {
   });
 
   line.addTo(mymap);
-
 }
 
 // init
@@ -137,6 +134,29 @@ $(document).ready(function() {
   
   plotExample();
   connect();
+
+  $('#menu .icon').click(function(e) {
+    if($('#menu ul').css('display') === 'none') {
+      $('#menu ul').css('display', 'block');
+    } else {
+      $('#menu ul').css('display', 'none');
+    }
+  });
+
+  $('#menu ul li').hover(function(e) {
+    // on mouse enter
+    $('#menu ul li').removeClass('highlight');
+    $(e.target).addClass('highlight');
+  }, function(e) {
+    $('#menu ul li').removeClass('highlight');
+    $('#menu ul li.current').addClass('highlight');
+  });
+
+  $('#map').click(function(e) {
+    $('#menu ul').css('display', 'none');
+    $('#menu ul li').removeClass('highlight');
+    $('#menu ul li.current').addClass('highlight');
+  });
 
 });
 
