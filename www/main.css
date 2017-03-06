@@ -3,13 +3,16 @@ body {
     font-family: serif;
 }
 
-#map {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+.noselect {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
+
+/* menu */
 
 #menu {
     position: fixed;
@@ -30,6 +33,7 @@ body {
   text-align: left;
 }
 
+
 #menu ul {
     display: none;
     position: relative;
@@ -48,18 +52,8 @@ body {
 }
 
 #menu ul li {
-    padding-left: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
 }
 
-#menu ul li.first {
-    padding-top: 10px;
-}
-
-#menu ul li.last {
-    padding-bottom: 10px;
-}
 
 #menu ul li.highlight {
     background-color: #2a944a;
@@ -70,6 +64,21 @@ body {
     height: 2px;
     background-color: white;
 
+}
+
+#menu a {
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: block;
+}
+
+#menu ul li a.first {
+    padding-top: 10px;
+}
+
+#menu ul li a.last {
+    padding-bottom: 10px;
 }
 
 #menu .icon {
@@ -88,3 +97,35 @@ body {
     font-size: 70px;
     
 }
+
+
+/* tabs */
+
+.tab {
+    display: none;
+}
+
+.active-tab {
+    display: block
+}
+
+#map {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#list {
+    font-family: sans-serif;
+}
+
+#admin {
+    font-family: sans-serif;
+}
+
+#about {
+    font-family: sans-serif;
+}
+

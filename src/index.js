@@ -1,8 +1,95 @@
 
-var websocket = require('websocket-stream');
-var rpc = require('rpc-multistream'); // RPC and multiple streams over one stream
+var websocket = require('websocket-stream'); // stream over websocket 
+var rpc = require('rpc-multistream'); // stream multiplexer and rpc
+var route = require('page'); // minimal router
 var $ = require('jquery');
 var L = require('leaflet');
+
+var settings = require('./settings.js');
+
+function init() {
+  
+  plotExample();
+  connect();
+
+  // init routes
+
+  route.base(settings.basePath); // set base url path
+
+  route('/', function(ctx, next) {
+    tabTo('map');
+    
+  });
+
+  route('/map', function(ctx, next) {
+    tabTo('map');
+  });
+
+  route('/list', function(ctx, next) {
+    tabTo('list');
+  });
+
+  route('/admin', function(ctx, next) {
+    tabTo('admin');
+  });
+
+  route('/about', function(ctx, next) {
+    tabTo('about');
+  });
+
+  route('*', function(ctx, next) {
+    
+  });
+
+  route();
+
+  // bindings for menu
+
+  // menu show/hide on click
+  $('#menu .icon').click(function(e) {
+    e.stopPropagation();
+
+    if($('#menu ul').css('display') === 'none') {
+      $('#menu ul').css('display', 'block');
+    } else {
+      $('#menu ul').css('display', 'none');
+    }
+  });
+  $('#menu').mousedown(function(e) {
+    e.stopPropagation();    
+  });
+
+  // menu mouse-over highlighting
+  $('#menu ul li').hover(function(e) {
+    // on mouse enter
+    $('#menu ul li').removeClass('highlight');
+    $(e.target).closest('li').addClass('highlight');
+  }, function(e) {
+    // on mouse exit
+    $('#menu ul li').removeClass('highlight');
+    $('#menu ul li.current').addClass('highlight');
+  });
+
+  // menu item click handling
+  $('#map ul li a').click(function(e) {
+    $('#menu ul li').removeClass('current highlight');
+    $(e.target).closest('li').addClass('current highlight');
+
+    $('#menu ul').css('display', 'none');
+  });
+
+  // menu disappears when clicking elsewhere
+  $('body').mousedown(function(e) {
+    $('#menu ul').css('display', 'none');
+  });
+}
+
+
+// make the specified ui tab visible and hide all others
+function tabTo(tabID) {
+  $('.tab').removeClass('active-tab');
+  $('#'+tabID).addClass('active-tab');
+}
 
 var reconnectDelay = 2;
 var reconnectAttempts = 0;
@@ -128,38 +215,6 @@ function plotExample() {
   line.addTo(mymap);
 }
 
-// init
-
-$(document).ready(function() {
-  
-  plotExample();
-  connect();
-
-  $('#menu .icon').click(function(e) {
-    if($('#menu ul').css('display') === 'none') {
-      $('#menu ul').css('display', 'block');
-    } else {
-      $('#menu ul').css('display', 'none');
-    }
-  });
-
-  $('#menu ul li').hover(function(e) {
-    // on mouse enter
-    $('#menu ul li').removeClass('highlight');
-    $(e.target).addClass('highlight');
-  }, function(e) {
-    $('#menu ul li').removeClass('highlight');
-    $('#menu ul li.current').addClass('highlight');
-  });
-
-  $('#map').click(function(e) {
-    $('#menu ul').css('display', 'none');
-    $('#menu ul li').removeClass('highlight');
-    $('#menu ul li.current').addClass('highlight');
-  });
-
-});
-
 function onConnect(remote) {
 
   console.log("Connected");
@@ -177,3 +232,8 @@ function onConnect(remote) {
   });
 
 }
+
+// init
+
+$(document).ready(init);
+

@@ -9,19 +9,38 @@
   </head>
   <body>
 
-    <header id="menu">
+    <header id="menu" class="noselect">
       <div class="icon">&#9776;</div>
       <nav>
         <ul>
           <div class="top-line">&nbsp;</div>
-          <li class="first current highlight"><a href="#">Map view</a></li>
-          <li><a href="#">List view</a></li>
-          <li><a href="#">Admin</a></li>
-          <li class="last"><a href="#">About</a></li>
+          <li class="current highlight"><a href="/map" class="first">Map view</a></li>
+          <li><a href="/list">List view</a></li>
+          <li><a href="/admin">Admin</a></li>
+          <li><a href="/about" class="last">About</a></li>
         </ul>
       </nav>
     </header>
 
-    <div id="map"></div>
+    <div id="map" class="tab active-tab"></div>
+
+    <div id="list" class="tab">
+      <h3>List of nodes</h3>
+    </div>
+
+    <div id="admin" class="tab">
+      <h3>Admin interface not yet implemented</h3>
+    </div>
+
+    <div id="about" class="tab">
+      <h3>About People's Map</h3>
+
+      <p>This map shows the active mesh nodes in the <a href="https://peoplesopen.net/">People's Open Network</a> located in the San Francisco Bay Area.</p>
+
+      <p>Source code for is available under the AGPLv3 <a href="https://github.com/sudomesh/peoples-map">here</a>.</p>
+
+      <p>Map data is provided by <a href="https://openstreetmap.org/">OpenStreetMap</a> via <a href="https://mapbox.com/">MapBox</a> though we hope to move to self-hosted map tiles in the near future.</p>
+    </div>
+
   </body>  
 </html>

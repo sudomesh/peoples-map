@@ -1,0 +1,6 @@
+
+module.exports = {
+
+  basePath: '' // if the app is run out of /foo/* then set this to '/foo'
+
+};
