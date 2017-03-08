@@ -9,7 +9,7 @@ var settings = require('./settings.js');
 
 function init() {
   
-  plotExample();
+  mapExample();
   connect();
 
   // init routes
@@ -17,7 +17,7 @@ function init() {
   route.base(settings.basePath); // set base url path
 
   route('/', function(ctx, next) {
-    tabTo('map');
+    tabTo('list');
     menuSelect(ctx.path);
   });
 
@@ -177,7 +177,7 @@ function connect() {
 }
 
 
-function plotExample() {
+function mapExample() {
 
   var sudoMeshHQPosition = [37.83499,-122.26432];
 
@@ -233,8 +233,27 @@ function onConnect(remote) {
 
     var s = remote.babelRoutes();
 
+    var container = $('#node-list')[0];
+    container.innerHTML = '';
+
+    var slash26Count = 0;
+    var slash32Count = -1; // don't count the exit node
+
     s.on('data', function(o) {
-      console.log("babel says:", o);
+      // console.log("babel says:", o);
+
+      container.innerHTML += '<div class="row"><span class="cell small">'+o.ip+'</span><span class="cell small">'+o.subnet+'</span><span class="cell">'+o.data+'</span></div>';
+      
+      if(o.subnet == 26) {
+        slash26Count++;
+      } else if(o.subnet == 32) {
+        slash32Count++;
+      }
+
+    });
+
+    s.on('end', function() {
+      $('#node-count').html("<p>Home nodes: " + slash26Count + ". Extender nodes: " + slash32Count + "</p>");
     });
 
   });

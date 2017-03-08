@@ -111,7 +111,7 @@ websocket.createServer({server: server}, function(stream) {
           var o = {
             ip: m2[1],
             subnet: parseInt(m2[2]),
-            data: m2[3]
+            data: m2[3] // ToDo parse the rest
           };
 
           if(o.ip === '0.0.0.0') continue;

@@ -134,3 +134,20 @@ body {
 }
 
 
+#node-list {
+    display: table;
+}
+#node-list .row {
+    display: table-row;
+}
+#node-list .cell {
+    display: table-cell;
+}
+
+#node-list .small {
+    width: 130px;
+}
+
+#node-count {
+    padding: 10px 0;
+}
