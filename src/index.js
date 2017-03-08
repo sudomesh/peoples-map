@@ -18,27 +18,32 @@ function init() {
 
   route('/', function(ctx, next) {
     tabTo('map');
-    
+    menuSelect(ctx.path);
   });
 
   route('/map', function(ctx, next) {
     tabTo('map');
+    menuSelect(ctx.path);
   });
 
   route('/list', function(ctx, next) {
     tabTo('list');
+    menuSelect(ctx.path);
   });
 
   route('/admin', function(ctx, next) {
     tabTo('admin');
+    menuSelect(ctx.path);
   });
 
   route('/about', function(ctx, next) {
     tabTo('about');
+    menuSelect(ctx.path);
   });
 
   route('*', function(ctx, next) {
-    
+    tabTo('four-oh-four');
+    menuSelect(ctx.path);    
   });
 
   route();
@@ -70,25 +75,28 @@ function init() {
     $('#menu ul li.current').addClass('highlight');
   });
 
-  // menu item click handling
-  $('#map ul li a').click(function(e) {
-    $('#menu ul li').removeClass('current highlight');
-    $(e.target).closest('li').addClass('current highlight');
-
-    $('#menu ul').css('display', 'none');
-  });
-
   // menu disappears when clicking elsewhere
   $('body').mousedown(function(e) {
     $('#menu ul').css('display', 'none');
   });
 }
 
-
 // make the specified ui tab visible and hide all others
 function tabTo(tabID) {
   $('.tab').removeClass('active-tab');
   $('#'+tabID).addClass('active-tab');
+
+}
+
+function menuSelect(path) {
+  $('#menu ul li').removeClass('current highlight');
+
+  var a = $('#menu ul li a[href^="'+path+'"]');
+  if(a) {
+    a.closest('li').addClass('current highlight');
+  }
+
+  $('#menu ul').css('display', 'none');
 }
 
 var reconnectDelay = 2;
